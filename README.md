@@ -1,2 +1,2 @@
-# pokemonchat
-chat de pokemones en react
+# Pokemonchat
+Chat de pokemones en react
