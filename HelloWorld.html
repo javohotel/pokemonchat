@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo react</title>
+</head>
+<body>
+	
+	<div id="container"></div>
+	
+	<script src="http://fb.me/react-0.13.3.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.13.3.js"></script>
+
+	<script type="text/jsx;harmony=true">
+		class HelloWorldComponent extends React.Component {
+
+		render() {
+				return <h1>{this.props.name} evoluciona en nivel {this.props.level}</h1>
+			}
+		};
+
+		HelloWorldComponent.propTypes = {
+			name: React.PropTypes.string,
+			level: React.PropTypes.number
+		};
+
+		React.render(<HelloWorldComponent name="pikachu" level={25}/>, document.getElementById('container'));
+
+		setTimeout(() => {
+			React.render(<HelloWorldComponent name="raychu" level={60}/>, document.getElementById('container'));
+		}, 5000)		
+	</script>
+	
+</body>
+</html>
